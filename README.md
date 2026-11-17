@@ -26,10 +26,22 @@ Tools Grace can use to create, perceive, or act.
 
 | Repository | Role |
 |---|---|
-| [Canvas](https://github.com/AGi-robot/canvas) | Editable vector drawing and Canvas Studio. |
+| [Canvas](https://github.com/AGi-robot/canvas) | Vector drawing actions, validation, and SVG rendering. |
 | [Imaging](https://github.com/AGi-robot/imaging) | Image-related capabilities used by Grace. |
 
-Add future tools here as their purpose and connection to Grace become clear.
+### Shared components
+
+| Repository | Role |
+|---|---|
+| [Memory](https://github.com/AGi-robot/memory) | Shared memory interface and storage backends. |
+| [Cypher](https://github.com/AGi-robot/cypher) | Shared ROS 2 messages and signal encoding. |
+
+### Interfaces
+
+| Repository | Role |
+|---|---|
+| [Telepathy](https://github.com/AGi-robot/telepathy) | Web console, chat interface, and Canvas Studio. |
+| [Augmented Reality](https://github.com/AGi-robot/augmented-reality) | Android Unity app that places Grace in the room using ARCore. |
 
 ### Diagnostics · `#diagnostic`
 
@@ -46,7 +58,9 @@ Unit-test repositories and test suites belong in this group when they are mainta
 ```text
 Grace
 ├── Entity       AIVA, memory, sensory input, runtime systems
-├── Capabilities Canvas, Imaging, and other tools
+├── Capabilities Canvas and Imaging
+├── Shared       Memory and Cypher
+├── Interfaces   Telepathy and Augmented Reality
 └── Diagnostics  Scorecard and cross-component evaluation
 ```
 
