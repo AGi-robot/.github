@@ -48,3 +48,11 @@ Grace
 ├── Entity       AIVA, memory, sensory input, runtime systems
 ├── Capabilities Canvas, Imaging, and other tools
 └── Diagnostics  Scorecard and cross-component evaluation
+```
+
+The entity hosts and coordinates Grace’s behavior. Capabilities provide functions she can call. Diagnostics help evaluate her behavior and the models and components she uses.
+
+### Project status
+AGi is under active development. Repository descriptions and benchmark results document what has been implemented; planned model configurations and future capabilities should be treated as plans until they are integrated and evaluated.
+
+Built in beautiful British Columbia, Canada.
