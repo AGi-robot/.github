@@ -18,7 +18,8 @@ Grace’s runtime and internal systems: identity, orchestration, memory, sensory
 
 | Repository | Role |
 |---|---|
-| [AIVA](https://github.com/AGi-robot/AIVA) | Grace’s current runtime, including chat, identity, recent conversation memory, and integration with the WebUI and canvas. |
+| [Shell](https://github.com/AGi-robot/shell) | Runtime workspace, component wiring and configuration support. |
+| [Telepathy](https://github.com/AGi-robot/telepathy) | Grace’s receptor and conversation adapter, following the Console/Receptor migration. |
 
 ### Capabilities · `#capability`
 
@@ -35,12 +36,14 @@ Tools Grace can use to create, perceive, or act.
 |---|---|
 | [Memory](https://github.com/AGi-robot/memory) | Shared memory interface and storage backends. |
 | [Cypher](https://github.com/AGi-robot/cypher) | Shared ROS 2 messages and signal encoding. |
+| [Interactive](https://github.com/AGi-robot/interactive) | Reusable conversation engine. |
+| [Health](https://github.com/AGi-robot/health) | Logging and system health reporting. |
 
 ### Interfaces
 
 | Repository | Role |
 |---|---|
-| [Telepathy](https://github.com/AGi-robot/telepathy) | Web console, chat interface, and Canvas Studio. |
+| [Console](https://github.com/AGi-robot/console) | External interfaces, including Telepathy Console and Canvas Studio. |
 | [Augmented Reality](https://github.com/AGi-robot/augmented-reality) | Android Unity app that places Grace in the room using ARCore. |
 
 ### Diagnostics · `#diagnostic`
@@ -51,16 +54,16 @@ Benchmarks and checks used to inspect behavior, compare models, and validate com
 |---|---|
 | [Scorecard](https://github.com/AGi-robot/scorecard) | Benchmark protocols, evaluation results, and model comparisons. |
 
-Unit-test repositories and test suites belong in this group when they are maintained separately from the component they test. Tests stored inside AIVA, Canvas, or Imaging stay with their component.
+Unit-test repositories and test suites belong in this group when they are maintained separately from the component they test. Tests stored inside Shell, Canvas, or Imaging stay with their component.
 
 ## How the groups fit together
 
 ```text
 Grace
-├── Entity       AIVA, memory, sensory input, runtime systems
+├── Entity       Shell, Telepathy receptor, Grace policies
 ├── Capabilities Canvas and Imaging
 ├── Shared       Memory and Cypher
-├── Interfaces   Telepathy and Augmented Reality
+├── Interfaces   Console and Augmented Reality
 └── Diagnostics  Scorecard and cross-component evaluation
 ```
 
